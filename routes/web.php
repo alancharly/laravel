@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', 'MenuController@homepage');
+Route::get('/', 'PagesController@homepage');
 
-Route::get('/docentes', 'MenuController@docentes');
+Route::get('/messages/{message}', 'MessagesController@show');
+
+Route::post('/messages/create', 'MessagesController@create');
+
+Auth::routes();
