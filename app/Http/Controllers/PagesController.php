@@ -12,7 +12,7 @@ class PagesController extends Controller
     	// Si la tabla tiene un nombre con 2 palabras, en Laravel sería MessageType
     	// En la base de datos, el nombre de la tabla debería ser: message_types
     	// La función "all", devuelve todos los métodos de ese modelo.
-    	$messages = Message::paginate(10);
+    	$messages = Message::latest()->paginate(10);
 
     	//dd($messages);
 
